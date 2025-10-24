@@ -74,23 +74,55 @@ while(count >=0){
     console.log("🎯 Got it! The number was 5.");
   // 2. Menu Simulation:
   //    Show a fake menu at least once (like “1. Play  2. Exit”) and exit when option = 2.
-  //
+   let option;
+    do {
+      console.log("Menu:\n1. Play\n2. Exit");
+      option = Math.floor(Math.random() * 2) + 1; // SIMULATED randon choice
+      console.log("You selected:", option);
+    } while (option !== 2);
+    console.log("Exited the menu.");
+
   // 3. Number Input Validation:
   //    Ask for a number greater than 10.
   //    Keep re-checking until it’s valid (simulate input with variables).
-
+ let number;
+    const simulatedInputs = [3, 8, 12];
+    let j = 0;
+    do {
+      number = simulatedInputs[j];
+      console.log("Entered:", number);
+      j++;
+    } while (number <= 10);
+    console.log("✅ Valid number entered:", number);
 
 
   // 🔹 PART D – BONUS: LOOP CONTROL
   // 1. Break Example:
   //    Loop numbers 1–10. Stop completely when the number is 7.
-  //
+   for (let i = 1; i <= 10; i++) {
+      if (i === 7) {
+        console.log("Stopped at 7.");
+        break;
+      }
+      console.log(i);
+    }
   // 2. Continue Example:
   //    Loop numbers 1–10. Skip printing when the number is 5.
-  //
+      for (let i = 1; i <= 10; i++) {
+      if (i === 5) continue;
+      console.log(i);
+    }
   // 3. Combined:
   //    Print numbers 1–20, skip even numbers, but stop entirely when you hit 17.
 
+    for (let i = 1; i <= 20; i++) {
+      if (i % 2 === 0) continue; // skip even numbers
+      if (i === 17) {
+        console.log("Stopped at 17.");
+        break;
+      }
+      console.log(i);
+    }
 
 
   // ✅ Submission
